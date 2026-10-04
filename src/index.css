@@ -1,0 +1,40 @@
+:root {
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f8fafc;
+  color: #0f172a;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+/* Print Badge Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-badge, #printable-badge * {
+    visibility: visible;
+  }
+  #printable-badge {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+}
